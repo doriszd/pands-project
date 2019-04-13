@@ -151,6 +151,103 @@ plt.show()
 The density plots on the diagonal make it easy to compare distributions between the species. 
 After using pair plots it is clear that the relationship between pairs of features of a iris-setosa is distinctly different from those of the other two species. There is some overlap in the pairwise relationships of the other two species, iris-versicolor and iris-virginica. According to Kohler as plot suggests that Iris-setosa is the most separable, it would be a good idea to explore some of that data by itself (dakokohler.com). 
 
+#### 6. Pairplot 2  
+import seaborn as sns  
+sns.pairplot(iris_1,hue="species", kind='reg', palette="GnBu_d")  
+#Remove the top and right spines from plot  
+sns.despine()  
+#show plot  
+import matplotlib.pyplot as plt  
+plt.show()  
+
+![pairplot2](https://github.com/doriszd/pands-project/blob/master/Figure_6_pairplot2.png "pairplot2")
+
+### 7. Swarm plot   
+
+The points are adjusted along the categorical axis so that they don’t overlap. This gives a better representation of the distribution of values, but it does not scale well to large numbers of observations. This style of plot is sometimes called a “beeswarm”.
+A swarm plot can be drawn on its own, but it is also a good complement to a box or violin plot in cases where you want to show all observations along with some representation of the underlying distribution (seaborn.pydata.org).
+
+import seaborn as sns  
+#setting the background color and size of graph  
+sns.set(style="whitegrid", palette="GnBu_d", rc={'figure.figsize':(11.7,8.27)})  
+#"Melt" the dataset  
+iris2 = pd.melt(iris_1, "species", var_name="measurement")  
+#Draw a categorical scatterplot  
+sns.swarmplot(x="measurement", y="value", hue="species",palette="GnBu_d", data=iris2)  
+#Remove the top and right spines from plot  
+sns.despine()  
+#show plot  
+import matplotlib.pyplot as plt  
+plt.show()  
+
+![swarm](https://github.com/doriszd/pands-project/blob/master/Figure_7_swarmplot.png "swarm")
+
+Swarm plot gives clear representation of sepal length, sepal width, petal length and petal width of three different species of iris flower. Important difference can be seen in petal length and petal width variables as setosa is completely separated on the plot from versicolor and virginica. Petal length and petal width are both shorter in setosa than they are in other two species. Better representation of petal length and petal width in the next 2 plots. 
+
+#### 8. Violin plot
+
+A violin plot plays a similar role as a box. It shows the distribution of quantitative data across several levels of one (or more) categorical variables such that those distributions can be compared. Unlike a box plot, in which all of the plot components correspond to actual datapoints, the violin plot features a kernel density estimation of the underlying distribution. This is an effective and attractive way to show multiple distributions of data at once (seaborn.pydata.org). White dot in the plots represents the median. 
+
+#### 8. Violin plot - petal length 
+import seaborn as sns  
+#setting the background color and size of graph  
+sns.set(style="whitegrid", palette="GnBu_d", rc={'figure.figsize':(11.7,8.27)})  
+sns.violinplot(x="species", y="petal_length", palette="GnBu_d", data=iris_1)  
+#Remove the top and right spines from plot  
+sns.despine()  
+#show plot  
+import matplotlib.pyplot as plt  
+plt.show()  
+
+![violin](https://github.com/doriszd/pands-project/blob/master/Figure_8_violin%20plot.png "violin_leng")
+
+As shown in the plot setosa’s shape is completely different from versicolor and virginica. Setosa’s petal is between around 1 and 2 cm long while versicolor and virginica have considerably longer petal, versicolor (2.7 – 5.6 cm) and virginica (4 – 7.2 cm). 
+
+#### 9. Violin plot - petal width  
+import seaborn as sns  
+#setting the background color and size of graph  
+sns.set(style="whitegrid", palette="GnBu_d", rc={'figure.figsize':(11.7,8.27)})  
+sns.violinplot(x="species", y="petal_width", palette="GnBu_d", data=iris_1)  
+#Remove the top and right spines from plot  
+sns.despine()  
+#show plot  
+import matplotlib.pyplot as plt  
+plt.show()  
+
+![violin](https://github.com/doriszd/pands-project/blob/master/Figure_9_violin%20plot%202.png "petal_width")
+
+Similarly to setosa’s petal length, petal width is significantly different from versicolor and virginica.  Versicolor and virginica have similar petal width, but virginica has the widest petal (1.1 - 2.8 cm.)
+
+#### 10. Box plot  
+
+A Box Plot is a convenient way of visually displaying the data distribution through their quartiles. It shows the distribution of quantitative data in a way that facilitates comparisons between variables or across levels of a categorical variable (seaborn.pydata.org). 
+
+import matplotlib.pyplot as plt  
+iris_1.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)  
+plt.show()  
+
+![boxplot](https://github.com/doriszd/pands-project/blob/master/Figure_10_iris%20data%20plot.png "box")
+
+Finally, the plot is representing sepal length, sepal width, petal length and petal width of all species. It is the overview of all types of iris flowers grouped together. Median of sepal length is 5.7 cm, median of sepal width is 3cm while, petal length is around 4.3 cm and petal width is around 1.3 cm. 
+
+Having closely looked into the iris dataset, it can be concluded that there is significant difference between Iris-setosa and other two species, Iris-versicolor and Iris-virginica. The difference is noted especially in setosa’s petal width and petal length which is remarkably shorter and thinner than in other two cases. The future steps in this project will be to include modeling with scikit learn in order to train and test different models on the same dataset. 
 
 
+#### References:
+
+https://www.analyticsindiamag.com/start-building-first-machine-learning-project-famous-dataset/ 
+https://dakokohler.com/iris-dataset 
+https://github.com/RitRa/Project2018-iris 
+https://www.kaggle.com/jchen2186/machine-learning-with-iris-dataset 
+https://matplotlib.org/ 
+https://medium.com/@srishtisawla/iris-flower-classification-fb6189de3fff 
+https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342 
+https://www.numpy.org/ 
+https://rajritvikblog.wordpress.com/2017/06/29/iris-dataset-analysis-python/ 
+https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html 
+https://stats.stackexchange.com/questions/74776/what-aspects-of-the-iris-data-set-make-it-so-successful-as-an-example-teaching 
+https://seaborn.pydata.org/generated/seaborn.swarmplot.html 
+https://seaborn.pydata.org/ 
+https://www.theseus.fi/bitstream/handle/10024/64785/yang_yu.pdf?sequence=1 
+https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51 
 
