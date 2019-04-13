@@ -20,7 +20,7 @@ The data set contains three classes of 50 instances each where each class refers
 
     • 150 samples
     • 3 labels: species of Iris (Iris setosa, Iris virginica and Iris versicolor)
-    • 4 features: Sepal length, Sepal width, Petal length, Petal width in cm
+    • 5 features: Sepal length, Sepal width, Petal length, Petal width in cm and Species
 
 Data set was downloaded from the Internet (www.machinelearningmastery.com)
 
@@ -40,6 +40,9 @@ Open source library providing high-performance, easy to use data structures and 
 There are 150 observations with 5 features describing sepal length, sepal width, petal length, petal width and species. The number of each species is 50. 
 
 In the next few tables some data set characteristics are shown.  In the table data.head() the first 10 rows of data set are shown. Next table gives information about the dataset. It gives the number of each group ( Iris setosa, Iris virginica and Iris versicolor). Furthermore, the last table gives us description of statistical features – count, mean, std, min, max of each iris species. Count is 150 which refers to the number of iris flowers. Mean gives arithmetical average number and STD represents the percentage of flowers in each species that are far from the average. 
+
+data.head()
+![data_head](https://github.com/doriszd/pands-project/blob/master/head.JPG "data.head()")
 
 ## Data visualization
 
