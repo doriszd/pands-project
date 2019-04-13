@@ -235,19 +235,20 @@ Having closely looked into the iris dataset, it can be concluded that there is s
 
 #### References:
 
-https://www.analyticsindiamag.com/start-building-first-machine-learning-project-famous-dataset/ 
-https://dakokohler.com/iris-dataset 
-https://github.com/RitRa/Project2018-iris 
-https://www.kaggle.com/jchen2186/machine-learning-with-iris-dataset 
-https://matplotlib.org/ 
-https://medium.com/@srishtisawla/iris-flower-classification-fb6189de3fff 
-https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342 
-https://www.numpy.org/ 
-https://rajritvikblog.wordpress.com/2017/06/29/iris-dataset-analysis-python/ 
-https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html 
-https://stats.stackexchange.com/questions/74776/what-aspects-of-the-iris-data-set-make-it-so-successful-as-an-example-teaching 
-https://seaborn.pydata.org/generated/seaborn.swarmplot.html 
-https://seaborn.pydata.org/ 
-https://www.theseus.fi/bitstream/handle/10024/64785/yang_yu.pdf?sequence=1 
-https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51 
+https://www.analyticsindiamag.com/start-building-first-machine-learning-project-famous-dataset/   
+https://dakokohler.com/iris-dataset   
+https://github.com/RicardsGraudins/Iris-Flower-Data-Set  
+https://github.com/RitRa/Project2018-iris   
+https://www.kaggle.com/jchen2186/machine-learning-with-iris-dataset   
+https://matplotlib.org/   
+https://medium.com/@srishtisawla/iris-flower-classification-fb6189de3fff   
+https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342   
+https://www.numpy.org/   
+https://rajritvikblog.wordpress.com/2017/06/29/iris-dataset-analysis-python/   
+https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html   
+https://stats.stackexchange.com/questions/74776/what-aspects-of-the-iris-data-set-make-it-so-successful-as-an-example-teaching   
+https://seaborn.pydata.org/generated/seaborn.swarmplot.html   
+https://seaborn.pydata.org/   
+https://www.theseus.fi/bitstream/handle/10024/64785/yang_yu.pdf?sequence=1   
+https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51   
 
