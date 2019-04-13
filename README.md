@@ -69,6 +69,7 @@ print (summary.head())
 
 Boxplots are standardized way of displaying the distribution of data based on a five number summary (“minimum”, “first quartile”, “median, “third quartile” and “maximum”). 
 
+
 # 1. Comparison of Sepal Length Distributions  
 #Import seaborn and matplotlib  
 import seaborn as sns  
@@ -81,8 +82,30 @@ title="Comparison of Sepal Length Distributions"
 sns.boxplot(x="species", y="sepal_length", data=iris_1)  
 #Increased fontsize  
 plt.title(title, fontsize=26)  
-plt.show()  
+plt.show()   
 
 ![sepal_len](https://github.com/doriszd/pands-project/blob/master/sepal.png "sepal_leng")
+
+From the above graph we can see that virginica has the longest sepal length while setosa has the shortest one. The difference is significant as virginica’s sepal length is around 6.5 cm and setosa’s sepal length is 5 cm. 
+
+# 2. Comparison of Sepal Width Distributions   
+#Import seaborn and matplotlib  
+import seaborn as sns  
+import matplotlib.pyplot as plt   
+#Set style, colours (standard) and plot size  
+sns.set(style="whitegrid", palette="GnBu_d", rc={"figure.figsize": (11.7, 8.27)})  
+#Title  
+title="Comparison of Sepal Width Distributions"  
+#x = species, y = sepal width  
+sns.boxplot(x="species", y="sepal_width", data=iris_1)  
+#Increased fontsize  
+plt.title(title, fontsize=26)  
+plt.show()
+
+![sepal_width](https://github.com/doriszd/pands-project/blob/master/Figure_2_sepal%20width%20dist.png "sepal_width")
+
+The graph shows that setosa has the widest sepal (median – 3.4 cm), while there is no big difference between versicolor (median - 2.8 cm), and virginica (median – 3 cm). 
+
+
 
 
