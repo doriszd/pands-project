@@ -42,8 +42,28 @@ There are 150 observations with 5 features describing sepal length, sepal width,
 In the next few tables some data set characteristics are shown.  In the table data.head() the first 10 rows of data set are shown. Next table gives information about the dataset. It gives the number of each group ( Iris setosa, Iris virginica and Iris versicolor). Furthermore, the last table gives us description of statistical features – count, mean, std, min, max of each iris species. Count is 150 which refers to the number of iris flowers. Mean gives arithmetical average number and STD represents the percentage of flowers in each species that are far from the average. 
 
 data.head()
+#Printing first 10 rows
+iris_1.columns = ["sepal_length", "sepal_width", "petal_length", "petal_width", "species"]
+iris_1.head(10)
+print (iris_1.head (10))
 
 ![data_head](https://github.com/doriszd/pands-project/blob/master/head.JPG "data.head()")
+
+
+data.count()
+#Size of each species
+iris_1["species"]. unique()
+print(iris_1.groupby ("species").size())
+
+![data_count](https://github.com/doriszd/pands-project/blob/master/count.JPG "data.count()")
+
+data.describe()
+#Count, mean, std, min, max
+summary = iris_1.describe()
+summary = summary.transpose()
+print (summary.head())
+
+![data.describe](https://github.com/doriszd/pands-project/blob/master/STD.JPG "data.describe()")
 
 ## Data visualization
 
