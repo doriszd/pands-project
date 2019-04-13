@@ -5,7 +5,7 @@
 
 # Iris flower dataset
 
-The Iris flower data is a multivariate data set introduced by the British statistician and biologist Ronald Fisher in the paper “The use of multiple measurements in taxonomic problems” as an example of linear discriminant analysis.  It is sometimes called Anderson’s Iris data set as Edgar Anderson collected the data to quantify the morphologic variation of Iris flowers of three related species (Setosa, Versicolor and Virginica) from the same pasture, and picked on the same day and measured at the same time by the same person with the same tools. The sepals of a flower are the outer structures that protect the more fragile parts of the flower, such as the petals. In many flowers, the sepals are green, and only the petals are colorful. For Irises, however, the sepals are also colorful (medium.com). Picture taken from medium.com. 
+The Iris flower data is a multivariate data set introduced by the British statistician and biologist Ronald Fisher in the paper “The use of multiple measurements in taxonomic problems” as an example of linear discriminant analysis.  It is sometimes called Anderson’s Iris data set as Edgar Anderson collected the data to quantify the morphologic variation of Iris flowers of three related species (Setosa, Versicolor and Virginica) from the same pasture, picked on the same day and measured at the same time by the same person with the same tools. The sepals of a flower are the outer structures that protect the more fragile parts of the flower, such as the petals. In many flowers, the sepals are green, and only the petals are colorful. For Irises, however, the sepals are also colorful (medium.com). Picture taken from medium.com. 
 
 Picture 1. Iris flowers
 ![iris pic](https://github.com/doriszd/pands-project/blob/master/iris_pic1.jpg "Picture 1. Iris flowers")
@@ -44,24 +44,24 @@ In the next few tables some data set characteristics are shown.  In the table da
 data.head()
 #Printing first 10 rows
 iris_1.columns = ["sepal_length", "sepal_width", "petal_length", "petal_width", "species"]
-iris_1.head(10)
+iris_1.head(10)  
 print (iris_1.head (10))
 
 ![data_head](https://github.com/doriszd/pands-project/blob/master/head.JPG "data.head()")
 
 
-data.count()
-#Size of each species
-iris_1["species"]. unique()
-print(iris_1.groupby ("species").size())
+data.count()  
+#Size of each species  
+iris_1["species"]. unique()  
+print(iris_1.groupby ("species").size())  
 
 ![data_count](https://github.com/doriszd/pands-project/blob/master/count.JPG "data.count()")
 
-data.describe()
-#Count, mean, std, min, max
-summary = iris_1.describe()
-summary = summary.transpose()
-print (summary.head())
+data.describe()  
+#Count, mean, std, min, max  
+summary = iris_1.describe()  
+summary = summary.transpose()  
+print (summary.head())  
 
 ![data.describe](https://github.com/doriszd/pands-project/blob/master/STD.JPG "data.describe()")
 
@@ -69,7 +69,20 @@ print (summary.head())
 
 Boxplots are standardized way of displaying the distribution of data based on a five number summary (“minimum”, “first quartile”, “median, “third quartile” and “maximum”). 
 
+# 1. Comparison of Sepal Length Distributions  
+#Import seaborn and matplotlib  
+import seaborn as sns  
+import matplotlib.pyplot as plt   
+#Set style, colours (standard) and plot size  
+sns.set(style="whitegrid", palette="GnBu_d", rc={"figure.figsize": (11.7, 8.27)})  
+#Title  
+title="Comparison of Sepal Length Distributions"  
+#x = species, y = sepal length  
+sns.boxplot(x="species", y="sepal_length", data=iris_1)  
+#Increased fontsize  
+plt.title(title, fontsize=26)  
+plt.show()  
 
-
+![sepal_len](https://github.com/doriszd/pands-project/blob/master/sepal.png "sepal_leng")
 
 
