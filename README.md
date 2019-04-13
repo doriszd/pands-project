@@ -70,7 +70,7 @@ print (summary.head())
 Boxplots are standardized way of displaying the distribution of data based on a five number summary (“minimum”, “first quartile”, “median, “third quartile” and “maximum”). 
 
 
-# 1. Comparison of Sepal Length Distributions  
+#### 1. Comparison of Sepal Length Distributions  
 #Import seaborn and matplotlib  
 import seaborn as sns  
 import matplotlib.pyplot as plt   
@@ -88,7 +88,7 @@ plt.show()
 
 From the above graph we can see that virginica has the longest sepal length while setosa has the shortest one. The difference is significant as virginica’s sepal length is around 6.5 cm and setosa’s sepal length is 5 cm. 
 
-# 2. Comparison of Sepal Width Distributions   
+#### 2. Comparison of Sepal Width Distributions   
 #Import seaborn and matplotlib  
 import seaborn as sns  
 import matplotlib.pyplot as plt   
@@ -105,6 +105,51 @@ plt.show()
 ![sepal_width](https://github.com/doriszd/pands-project/blob/master/Figure_2_sepal%20width%20dist.png "sepal_width")
 
 The graph shows that setosa has the widest sepal (median – 3.4 cm), while there is no big difference between versicolor (median - 2.8 cm), and virginica (median – 3 cm). 
+
+#### 3. Comparison of Petal Length Distributions  
+#Set style, colours (standard) and plot size  
+sns.set(style="whitegrid", palette="GnBu_d", rc={"figure.figsize": (11.7, 8.27)})  
+#Title  
+title="Comparison of Petal Length Distributions"  
+#x = species, y = petal length  
+sns.boxplot(x="species", y="petal_length", data=iris_1)  
+#Increased fontsize  
+plt.title(title, fontsize=26)  
+plt.show()  
+
+![petal_leng](https://github.com/doriszd/pands-project/blob/master/Figure_3_petal%20leng%20dist.png "petal_leng")
+
+It can be seen that virginica’s petal length distribution is spread from 5 to 6 cm with median, 5. 6 cm. Virginica is followed by versicolor with median, around 4.4 cm and finally there is a big difference when it comes to setosa whose median is around 1.5 cm. Setosa’s petal length makes setosa divergent from other species. 
+
+#### 4. Comparison of Petal Width Distributions
+#Set style, colours (standard) and plot size  
+sns.set(style="whitegrid", palette="GnBu_d", rc={"figure.figsize": (11.7, 8.27)})  
+#Title  
+title="Comparison of Petal Width Distributions"  
+#x = species, y = petal width  
+sns.boxplot(x="species", y="sepal_width", data=iris_1)  
+#Increased fontsize  
+plt.title(title, fontsize=26)  
+plt.show()  
+
+![petal_width](https://github.com/doriszd/pands-project/blob/master/Figure_4_petal%20width%20dist.png "petal_width")
+
+While setosa’s petal length is the shortest, setosa’s petal width is the widest of all, followed by virginica (median 3cm) and versicolor (median 2.7cm). 
+
+#### 5. Pairplot  
+#Background color  
+import seaborn as sns  
+sns.set(style="whitegrid")  
+sns.pairplot(iris_1, hue="species", palette="GnBu_d", diag_kind="kde", markers=["o", "s", "D"])  
+#Remove the top and right spines from plot  
+sns.despine()  
+import matplotlib.pyplot as plt  
+plt.show()  
+
+![pairplot](https://github.com/doriszd/pands-project/blob/master/Figure_5_pairplot.png "pairplot")
+
+The density plots on the diagonal make it easy to compare distributions between the species. 
+After using pair plots it is clear that the relationship between pairs of features of a iris-setosa is distinctly different from those of the other two species. There is some overlap in the pairwise relationships of the other two species, iris-versicolor and iris-virginica. According to Kohler as plot suggests that Iris-setosa is the most separable, it would be a good idea to explore some of that data by itself (dakokohler.com). 
 
 
 
