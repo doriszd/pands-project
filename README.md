@@ -11,7 +11,7 @@ Picture 1. Iris flowers
 ![iris pic](https://github.com/doriszd/pands-project/blob/master/iris_pic1.jpg "Picture 1. Iris flowers")
 
 
-The data consists of continuous numeric values which describe the dimensions of the respective features.  Iris dataset if often used as training model on which different algorithms are based (dakokohler.com). That also shows the importance of machine learning.  Fisher's data set is deservedly widely used throughout statistical science, especially for illustrating various problems in statistical graphics, multivariate statistics and machine learning (stats.stackexchange.com).
+The data consists of continuous numeric values which describe the dimensions of the respective features.  Iris dataset if often used as training model on which different algorithms are based (dakokohler.com). Fisher's data set is deservedly widely used throughout statistical science, especially for illustrating various problems in statistical graphics, multivariate statistics and machine learning (stats.stackexchange.com).
 In this project I will not be discussing different algorithms that could be applied since the aim of this project is to summarise the data set and write Python code to investigate it. Python libraries like matplotlib, seaborn, numpy and pandas will be used in order to present supporting tables and graphics. In the research paper data set will be analysed using Python data libraries, and based on the tables and graphics obtained its results will be discussed. 
 
 ## Data set
