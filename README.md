@@ -11,8 +11,8 @@ Picture 1. Iris flowers
 ![iris pic](https://github.com/doriszd/pands-project/blob/master/iris_pic1.jpg "Picture 1. Iris flowers")
 
 
-The data consists of continuous numeric values which describe the dimensions of the respective features.  Iris dataset if often used as training model based on different algorithms (dakokohler.com) which signifies the importance of machine learning.  It is deservedly widely used throughout statistical science, especially for illustrating various problems in statistical graphics, multivariate statistics and machine learning (stats.stackexchange.com)
-In this project I will not be discussing different algorithms that could be applied as the aim of this project is to summarise the data set and write Python code to investigate it. Python libraries like matplotlib, seaborn, numpy and pandas will be used in order to present supporting tables and graphics. In the research paper data set will be analysed using Python data libraries, and based on the tables and graphics obtained its results will be discussed. 
+The data consists of continuous numeric values which describe the dimensions of the respective features.  Iris dataset if often used as training model on which different algorithms are based (dakokohler.com). That also shows the importance of machine learning.  Fisher's data set is deservedly widely used throughout statistical science, especially for illustrating various problems in statistical graphics, multivariate statistics and machine learning (stats.stackexchange.com).
+In this project I will not be discussing different algorithms that could be applied since the aim of this project is to summarise the data set and write Python code to investigate it. Python libraries like matplotlib, seaborn, numpy and pandas will be used in order to present supporting tables and graphics. In the research paper data set will be analysed using Python data libraries, and based on the tables and graphics obtained its results will be discussed. 
 
 ## Data set
 
@@ -27,7 +27,7 @@ Data set was downloaded from the Internet (www.machinelearningmastery.com)
 ## Python Libraries
 
 #### Matplotlib 
-It is a Python 2D plotting library which produces publication quality figures in a  variety of hardcopy format and interactive environments across platforms.
+It is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy format and interactive environments across platforms.
 #### Seaborn
 Python data visualization library based on matplotlib. It provides a high level interface for drawing attractive and informative statistical graphics. 
 #### NumPy
@@ -39,7 +39,7 @@ Open source library providing high-performance, easy to use data structures and 
 
 There are 150 observations with 5 features describing sepal length, sepal width, petal length, petal width and species. The number of each species is 50. 
 
-In the next few tables some data set characteristics are shown.  In the table data.head() the first 10 rows of data set are shown. Next table gives information about the dataset. It gives the number of each group ( Iris setosa, Iris virginica and Iris versicolor). Furthermore, the last table gives us description of statistical features – count, mean, std, min, max of each iris species. Count is 150 which refers to the number of iris flowers. Mean gives arithmetical average number and STD represents the percentage of flowers in each species that are far from the average. 
+In the next few tables some data set characteristics will be shown.  In the table data.head() the first 10 rows of data set are shown. Next table gives information about the dataset. It gives the number of each group ( Iris setosa, Iris virginica and Iris versicolor). Furthermore, the last table gives us description of statistical features – count, mean, std, min, max of each iris species. Count is 150 which refers to the number of iris flowers. Mean gives arithmetical average number and STD represents the percentage of flowers in each species that are far from the average. 
 
 data.head()
 #Printing first 10 rows
@@ -86,7 +86,7 @@ plt.show()
 
 ![sepal_len](https://github.com/doriszd/pands-project/blob/master/sepal.png "sepal_leng")
 
-From the above graph we can see that virginica has the longest sepal length while setosa has the shortest one. The difference is significant as virginica’s sepal length is around 6.5 cm and setosa’s sepal length is 5 cm. 
+From the above graph we can see that virginica has the longest sepal while setosa has the shortest one. The difference is significant as virginica’s sepal length is around 6.5 cm and setosa’s sepal length is 5 cm. 
 
 #### 2. Comparison of Sepal Width Distributions   
 #Import seaborn and matplotlib  
@@ -119,7 +119,7 @@ plt.show()
 
 ![petal_leng](https://github.com/doriszd/pands-project/blob/master/Figure_3_petal%20leng%20dist.png "petal_leng")
 
-It can be seen that virginica’s petal length distribution is spread from 5 to 6 cm with median, 5. 6 cm. Virginica is followed by versicolor with median, around 4.4 cm and finally there is a big difference when it comes to setosa whose median is around 1.5 cm. Setosa’s petal length makes setosa divergent from other species. 
+It can be seen that virginica’s petal length distribution is spread from 5 to 6 cm with median, 5. 6 cm. Virginica is followed by versicolor with median around 4.4 cm and finally there is a big difference when it comes to setosa whose median is around 1.5 cm. Setosa’s petal length makes setosa divergent from other species. 
 
 #### 4. Comparison of Petal Width Distributions
 #Set style, colours (standard) and plot size  
@@ -134,7 +134,7 @@ plt.show()
 
 ![petal_width](https://github.com/doriszd/pands-project/blob/master/Figure_4_petal%20width%20dist.png "petal_width")
 
-While setosa’s petal length is the shortest, setosa’s petal width is the widest of all, followed by virginica (median 3cm) and versicolor (median 2.7cm). 
+While setosa’s petal is the shortest, it is also widest of all, followed by virginica (median 3cm) and versicolor (median 2.7cm). 
 
 #### 5. Pairplot  
 #Background color  
@@ -149,7 +149,7 @@ plt.show()
 ![pairplot](https://github.com/doriszd/pands-project/blob/master/Figure_5_pairplot.png "pairplot")
 
 The density plots on the diagonal make it easy to compare distributions between the species. 
-After using pair plots it is clear that the relationship between pairs of features of a iris-setosa is distinctly different from those of the other two species. There is some overlap in the pairwise relationships of the other two species, iris-versicolor and iris-virginica. According to Kohler as plot suggests that Iris-setosa is the most separable, it would be a good idea to explore some of that data by itself (dakokohler.com). 
+After using pair plots it is clear that the relationship between pairs of features of a iris-setosa is distinctly different from those of the other two species. There is some overlap in the pairwise relationships of the other two species, iris-versicolor and iris-virginica. According to Kohler, as plot suggests that Iris-setosa is the most separable, it would be a good idea to explore some of that data by itself (dakokohler.com). 
 
 #### 6. Pairplot 2  
 import seaborn as sns  
@@ -182,7 +182,7 @@ plt.show()
 
 ![swarm](https://github.com/doriszd/pands-project/blob/master/Figure_7_swarmplot.png "swarm")
 
-Swarm plot gives clear representation of sepal length, sepal width, petal length and petal width of three different species of iris flower. Important difference can be seen in petal length and petal width variables as setosa is completely separated on the plot from versicolor and virginica. Petal length and petal width are both shorter in setosa than they are in other two species. Better representation of petal length and petal width in the next 2 plots. 
+Swarm plot gives clear representation of sepal length, sepal width, petal length and petal width of three different species of iris flower. Important difference can be seen in petal length and petal width variables as setosa is completely separated on the plot from versicolor and virginica. Petal length and petal width are both smaller in size in setosa than they are in other two species. Better representation of petal length and petal width in the next 2 plots. 
 
 #### 8. Violin plot
 
@@ -216,7 +216,7 @@ plt.show()
 
 ![violin](https://github.com/doriszd/pands-project/blob/master/Figure_9_violin%20plot%202.png "petal_width")
 
-Similarly to setosa’s petal length, petal width is significantly different from versicolor and virginica.  Versicolor and virginica have similar petal width, but virginica has the widest petal (1.1 - 2.8 cm.)
+Similarly to setosa’s petal length, petal width is significantly different from versicolor and virginica.  Versicolor and virginica have similar petal width, while virginica has the widest petal (1.1 - 2.8 cm.)
 
 #### 10. Box plot  
 
@@ -228,7 +228,7 @@ plt.show()
 
 ![boxplot](https://github.com/doriszd/pands-project/blob/master/Figure_10_iris%20data%20plot.png "box")
 
-Finally, the plot is representing sepal length, sepal width, petal length and petal width of all species. It is the overview of all types of iris flowers grouped together. Median of sepal length is 5.7 cm, median of sepal width is 3cm while, petal length is around 4.3 cm and petal width is around 1.3 cm. 
+Finally, the plot is representing sepal length, sepal width, petal length and petal width of all species. It is the overview of all types of iris flowers grouped together. Median of sepal length is 5.7 cm, median of sepal width is 3cm while petal length is around 4.3 cm and petal width is around 1.3 cm. 
 
 Having closely looked into the iris dataset, it can be concluded that there is significant difference between Iris-setosa and other two species, Iris-versicolor and Iris-virginica. The difference is noted especially in setosa’s petal width and petal length which is remarkably shorter and thinner than in other two cases. The future steps in this project will be to include modeling with scikit learn in order to train and test different models on the same dataset. 
 
@@ -237,6 +237,7 @@ Having closely looked into the iris dataset, it can be concluded that there is s
 
 https://www.analyticsindiamag.com/start-building-first-machine-learning-project-famous-dataset/   
 https://dakokohler.com/iris-dataset   
+https://gist.github.com/curran/a08a1080b88344b0c8a7
 https://github.com/RicardsGraudins/Iris-Flower-Data-Set  
 https://github.com/RitRa/Project2018-iris   
 https://www.kaggle.com/jchen2186/machine-learning-with-iris-dataset   
