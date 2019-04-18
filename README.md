@@ -167,8 +167,8 @@ plt.show()
 The points are adjusted along the categorical axis so that they don’t overlap. This gives a better representation of the distribution of values, but it does not scale well to large numbers of observations. This style of plot is sometimes called a “beeswarm”.
 A swarm plot can be drawn on its own, but it is also a good complement to a box or violin plot in cases where you want to show all observations along with some representation of the underlying distribution (seaborn.pydata.org).
 
-import seaborn as sns  
-```#Setting the background color and size of graph  
+```import seaborn as sns  
+#Setting the background color and size of graph  
 sns.set(style="whitegrid", palette="GnBu_d", rc={'figure.figsize':(11.7,8.27)})  
 #"Melt" the dataset  
 iris2 = pd.melt(iris_1, "species", var_name="measurement")  
@@ -189,8 +189,8 @@ Swarm plot gives clear representation of sepal length, sepal width, petal length
 A violin plot plays a similar role as a box. It shows the distribution of quantitative data across several levels of one (or more) categorical variables such that those distributions can be compared. Unlike a box plot, in which all of the plot components correspond to actual datapoints, the violin plot features a kernel density estimation of the underlying distribution. This is an effective and attractive way to show multiple distributions of data at once (seaborn.pydata.org). White dot in the plots represents the median. 
 
 #### 8. Violin plot - petal length 
-import seaborn as sns  
-```#Setting the background color and size of graph  
+```import seaborn as sns  
+#Setting the background color and size of graph  
 sns.set(style="whitegrid", palette="GnBu_d", rc={'figure.figsize':(11.7,8.27)})  
 sns.violinplot(x="species", y="petal_length", palette="GnBu_d", data=iris_1)  
 #Remove the top and right spines from plot  
