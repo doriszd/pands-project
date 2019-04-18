@@ -71,7 +71,7 @@ Boxplots are standardized way of displaying the distribution of data based on a 
 
 
 #### 1. Comparison of Sepal Length Distributions  
-#Import seaborn and matplotlib  
+```#Import seaborn and matplotlib  
 import seaborn as sns  
 import matplotlib.pyplot as plt   
 #Set style, colours (standard) and plot size  
@@ -83,13 +83,13 @@ sns.boxplot(x="species", y="sepal_length", data=iris_1)
 #Increased fontsize  
 plt.title(title, fontsize=26)  
 plt.show()   
-
+```
 ![sepal_len](https://github.com/doriszd/pands-project/blob/master/sepal.png "sepal_leng")
 
 From the above graph we can see that virginica has the longest sepal while setosa has the shortest one. The difference is significant as virginica’s sepal length is around 6.5 cm and setosa’s sepal length is 5 cm. 
 
 #### 2. Comparison of Sepal Width Distributions   
-#Import seaborn and matplotlib  
+```#Import seaborn and matplotlib  
 import seaborn as sns  
 import matplotlib.pyplot as plt   
 #Set style, colours (standard) and plot size  
@@ -101,13 +101,13 @@ sns.boxplot(x="species", y="sepal_width", data=iris_1)
 #Increased fontsize  
 plt.title(title, fontsize=26)  
 plt.show()
-
+```
 ![sepal_width](https://github.com/doriszd/pands-project/blob/master/Figure_2_sepal%20width%20dist.png "sepal_width")
 
 The graph shows that setosa has the widest sepal (median – 3.4 cm), while there is no big difference between versicolor (median - 2.8 cm), and virginica (median – 3 cm). 
 
 #### 3. Comparison of Petal Length Distributions  
-#Set style, colours (standard) and plot size  
+```#Set style, colours (standard) and plot size  
 sns.set(style="whitegrid", palette="GnBu_d", rc={"figure.figsize": (11.7, 8.27)})  
 #Title  
 title="Comparison of Petal Length Distributions"  
@@ -116,13 +116,13 @@ sns.boxplot(x="species", y="petal_length", data=iris_1)
 #Increased fontsize  
 plt.title(title, fontsize=26)  
 plt.show()  
-
+```
 ![petal_leng](https://github.com/doriszd/pands-project/blob/master/Figure_3_petal%20leng%20dist.png "petal_leng")
 
 It can be seen that virginica’s petal length distribution is spread from 5 to 6 cm with median, 5. 6 cm. Virginica is followed by versicolor with median around 4.4 cm and finally there is a big difference when it comes to setosa whose median is around 1.5 cm. Setosa’s petal length makes setosa divergent from other species. 
 
 #### 4. Comparison of Petal Width Distributions
-#Set style, colours (standard) and plot size  
+```#Set style, colours (standard) and plot size  
 sns.set(style="whitegrid", palette="GnBu_d", rc={"figure.figsize": (11.7, 8.27)})  
 #Title  
 title="Comparison of Petal Width Distributions"  
@@ -131,13 +131,13 @@ sns.boxplot(x="species", y="sepal_width", data=iris_1)
 #Increased fontsize  
 plt.title(title, fontsize=26)  
 plt.show()  
-
+```
 ![petal_width](https://github.com/doriszd/pands-project/blob/master/Figure_4_petal%20width%20dist.png "petal_width")
 
 While setosa’s petal is the shortest, it is also widest of all, followed by virginica (median 3cm) and versicolor (median 2.7cm). 
 
 #### 5. Pairplot  
-#Background color  
+```#Background color  
 import seaborn as sns  
 sns.set(style="whitegrid")  
 sns.pairplot(iris_1, hue="species", palette="GnBu_d", diag_kind="kde", markers=["o", "s", "D"])  
@@ -145,21 +145,21 @@ sns.pairplot(iris_1, hue="species", palette="GnBu_d", diag_kind="kde", markers=[
 sns.despine()  
 import matplotlib.pyplot as plt  
 plt.show()  
-
+```
 ![pairplot](https://github.com/doriszd/pands-project/blob/master/Figure_5_pairplot.png "pairplot")
 
 The density plots on the diagonal make it easy to compare distributions between the species. 
 After using pair plots it is clear that the relationship between pairs of features of a iris-setosa is distinctly different from those of the other two species. There is some overlap in the pairwise relationships of the other two species, iris-versicolor and iris-virginica. According to Kohler, as plot suggests that Iris-setosa is the most separable, it would be a good idea to explore some of that data by itself (dakokohler.com). 
 
 #### 6. Pairplot 2  
-import seaborn as sns  
+```import seaborn as sns  
 sns.pairplot(iris_1,hue="species", kind='reg', palette="GnBu_d")  
 #Remove the top and right spines from plot  
 sns.despine()  
 #show plot  
 import matplotlib.pyplot as plt  
 plt.show()  
-
+```
 ![pairplot2](https://github.com/doriszd/pands-project/blob/master/Figure_6_pairplot2.png "pairplot2")
 
 ### 7. Swarm plot   
@@ -168,7 +168,7 @@ The points are adjusted along the categorical axis so that they don’t overlap.
 A swarm plot can be drawn on its own, but it is also a good complement to a box or violin plot in cases where you want to show all observations along with some representation of the underlying distribution (seaborn.pydata.org).
 
 import seaborn as sns  
-#setting the background color and size of graph  
+```#Setting the background color and size of graph  
 sns.set(style="whitegrid", palette="GnBu_d", rc={'figure.figsize':(11.7,8.27)})  
 #"Melt" the dataset  
 iris2 = pd.melt(iris_1, "species", var_name="measurement")  
@@ -179,7 +179,7 @@ sns.despine()
 #show plot  
 import matplotlib.pyplot as plt  
 plt.show()  
-
+```
 ![swarm](https://github.com/doriszd/pands-project/blob/master/Figure_7_swarmplot.png "swarm")
 
 Swarm plot gives clear representation of sepal length, sepal width, petal length and petal width of three different species of iris flower. Important difference can be seen in petal length and petal width variables as setosa is completely separated on the plot from versicolor and virginica. Petal length and petal width are both smaller in size in setosa than they are in other two species. Better representation of petal length and petal width in the next 2 plots. 
@@ -190,7 +190,7 @@ A violin plot plays a similar role as a box. It shows the distribution of quanti
 
 #### 8. Violin plot - petal length 
 import seaborn as sns  
-#setting the background color and size of graph  
+```#Setting the background color and size of graph  
 sns.set(style="whitegrid", palette="GnBu_d", rc={'figure.figsize':(11.7,8.27)})  
 sns.violinplot(x="species", y="petal_length", palette="GnBu_d", data=iris_1)  
 #Remove the top and right spines from plot  
@@ -198,14 +198,14 @@ sns.despine()
 #show plot  
 import matplotlib.pyplot as plt  
 plt.show()  
-
+```
 ![violin](https://github.com/doriszd/pands-project/blob/master/Figure_8_violin%20plot.png "violin_leng")
 
 As shown in the plot setosa’s shape is completely different from versicolor and virginica. Setosa’s petal is between around 1 and 2 cm long while versicolor and virginica have considerably longer petal, versicolor (2.7 – 5.6 cm) and virginica (4 – 7.2 cm). 
 
 #### 9. Violin plot - petal width  
-import seaborn as sns  
-#setting the background color and size of graph  
+```import seaborn as sns  
+#Setting the background color and size of graph  
 sns.set(style="whitegrid", palette="GnBu_d", rc={'figure.figsize':(11.7,8.27)})  
 sns.violinplot(x="species", y="petal_width", palette="GnBu_d", data=iris_1)  
 #Remove the top and right spines from plot  
@@ -213,7 +213,7 @@ sns.despine()
 #show plot  
 import matplotlib.pyplot as plt  
 plt.show()  
-
+```
 ![violin](https://github.com/doriszd/pands-project/blob/master/Figure_9_violin%20plot%202.png "petal_width")
 
 Similarly to setosa’s petal length, petal width is significantly different from versicolor and virginica.  Versicolor and virginica have similar petal width, while virginica has the widest petal (1.1 - 2.8 cm.)
@@ -221,7 +221,7 @@ Similarly to setosa’s petal length, petal width is significantly different fro
 #### 10. Box plot  
 
 A Box Plot is a convenient way of visually displaying the data distribution through their quartiles. It shows the distribution of quantitative data in a way that facilitates comparisons between variables or across levels of a categorical variable (seaborn.pydata.org). 
-
+```#Importing matplotlit
 import matplotlib.pyplot as plt  
 iris_1.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)  
 plt.show()  
