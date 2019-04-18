@@ -41,28 +41,28 @@ There are 150 observations with 5 features describing sepal length, sepal width,
 
 In the next few tables some data set characteristics will be shown.  In the table data.head() the first 10 rows of data set are shown. Next table gives information about the dataset. It gives the number of each group ( Iris setosa, Iris virginica and Iris versicolor). Furthermore, the last table gives us description of statistical features – count, mean, std, min, max of each iris species. Count is 150 which refers to the number of iris flowers. Mean gives arithmetical average number and STD represents the percentage of flowers in each species that are far from the average. 
 
-data.head()
+```data.head()
 #Printing first 10 rows
 iris_1.columns = ["sepal_length", "sepal_width", "petal_length", "petal_width", "species"]
 iris_1.head(10)  
 print (iris_1.head (10))
-
+```
 ![data_head](https://github.com/doriszd/pands-project/blob/master/head.JPG "data.head()")
 
 
-data.count()  
+```data.count()  
 #Size of each species  
 iris_1["species"]. unique()  
 print(iris_1.groupby ("species").size())  
-
+```
 ![data_count](https://github.com/doriszd/pands-project/blob/master/count.JPG "data.count()")
 
-data.describe()  
+```data.describe()  
 #Count, mean, std, min, max  
 summary = iris_1.describe()  
 summary = summary.transpose()  
 print (summary.head())  
-
+```
 ![data.describe](https://github.com/doriszd/pands-project/blob/master/STD.JPG "data.describe()")
 
 ## Data visualization
@@ -156,7 +156,7 @@ After using pair plots it is clear that the relationship between pairs of featur
 sns.pairplot(iris_1,hue="species", kind='reg', palette="GnBu_d")  
 #Remove the top and right spines from plot  
 sns.despine()  
-#show plot  
+#Show plot  
 import matplotlib.pyplot as plt  
 plt.show()  
 ```
@@ -176,7 +176,7 @@ iris2 = pd.melt(iris_1, "species", var_name="measurement")
 sns.swarmplot(x="measurement", y="value", hue="species",palette="GnBu_d", data=iris2)  
 #Remove the top and right spines from plot  
 sns.despine()  
-#show plot  
+#Show plot  
 import matplotlib.pyplot as plt  
 plt.show()  
 ```
@@ -210,7 +210,7 @@ sns.set(style="whitegrid", palette="GnBu_d", rc={'figure.figsize':(11.7,8.27)})
 sns.violinplot(x="species", y="petal_width", palette="GnBu_d", data=iris_1)  
 #Remove the top and right spines from plot  
 sns.despine()  
-#show plot  
+#Show plot  
 import matplotlib.pyplot as plt  
 plt.show()  
 ```
@@ -225,6 +225,7 @@ A Box Plot is a convenient way of visually displaying the data distribution thro
 import matplotlib.pyplot as plt  
 iris_1.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)  
 plt.show()  
+```
 
 ![boxplot](https://github.com/doriszd/pands-project/blob/master/Figure_10_iris%20data%20plot.png "box")
 
